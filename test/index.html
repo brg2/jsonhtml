@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+	<head>
+		<style>
+			textarea {margin:0px; position:fixed; left:0px; right:0px; width:100%;}
+			#jsonarea {top:0px; bottom:50%;}
+			#htmlarea {top:50%; bottom:0px;}
+			#buttons {position:fixed; top:50%; right:0px;}
+			#buttons button {position:absolute; right:10px; width:30px; height:30px;}
+			#buttons #convertHTML {top:-35px;}
+			#buttons #convertJSON {top:5px}
+		</style>
+		<script src='../src/jsonhtml.js'></script>
+		<script>
+			function convertJSON() {
+				document.getElementById('htmlarea').value = jsonhtml.getHTML(document.getElementById('jsonarea').value);
+			}
+		</script>
+	<head>
+	<body>
+		<textarea id='jsonarea' placeholder='JSON'></textarea>
+		<textarea id='htmlarea' placeholder='HTML'></textarea>
+		<div id='buttons'>
+			<button onclick='convertJSON()' id='convertJSON'>&#x25BC;</button>
+			<button onclick='convertHTML()' id='convertHTML'>&#x25B2;</button>
+		</div>
+	</body>
+</html>
