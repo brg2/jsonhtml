@@ -1,3 +1,4 @@
+<pre>
 jsonhtml
 ========
 
@@ -12,3 +13,4 @@ HTML
 
 JSON
 [['span',{id:'spanid'},['Some Text']]]
+</pre>
